@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 const { JWT_SECRET } = require('@repo/backend-common/config');
 import { middleware } from "./middleware";
 import {CreateUserSchema, SignInSchema, CreateRoomSchema} from "@repo/common/types";
+import { prismaClient } from "@repo/db/client";
 
 const app = express();
 
@@ -12,6 +13,9 @@ app.post("/signup", (req, res) => {
     res.status(400).json({error: data.error.errors});
     return;
   }
+  prismaClient.user.create({
+    
+  })
     res.json({ message: "Signup successful", userId:123 });
 });
 
