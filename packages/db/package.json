@@ -1,9 +1,6 @@
 {
-  "name": "@repo/common",
+  "name": "db",
   "version": "1.0.0",
-  "exports":{
-    "./types":"./src/types.ts"
-  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,11 +8,11 @@
   "devDependencies": {
     "@repo/typescript-config": "workspace:*"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "zod": "^3.24.2"
+    "@prisma/client": "6.3.1",
+    "prisma": "^6.3.1"
   }
 }
